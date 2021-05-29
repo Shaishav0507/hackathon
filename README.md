@@ -14,4 +14,5 @@ npm install
 
 ```python
 npm start
-```
+```; 
+Open website using https://shaishav0507.github.io/hackathon
