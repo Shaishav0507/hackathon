@@ -1,97 +1,99 @@
 const quizData = [
   {
-      question: "Which language runs in a web browser?",
-      a: "Java",
-      b: "C",
-      c: "Python",
-      d: "JavaScript",
-      correct: "d",
+    question:
+      "Which of the following is/are the symptoms of Black Fungus? \n \n1. Facial Swelling 2. Nasal Congestion 3. Headache",
+    a: "Only 1",
+    b: "Both 2",
+    c: "Only 3",
+    d: "1, 2 and 3",
+    correct: "d",
   },
   {
-      question: "What does CSS stand for?",
-      a: "Central Style Sheets",
-      b: "Cascading Style Sheets",
-      c: "Cascading Simple Sheets",
-      d: "Cars SUVs Sailboats",
-      correct: "b",
+    question:
+      "In India, when did the second phase of COVID-19 vaccination start?",
+    a: "December 2020",
+    b: "January 2021",
+    c: "March 2021",
+    d: "eburary 2021",
+    correct: "c",
   },
   {
-      question: "What does HTML stand for?",
-      a: "Hypertext Markup Language",
-      b: "Hypertext Markdown Language",
-      c: "Hyperloop Machine Language",
-      d: "Helicopters Terminals Motorboats Lamborginis",
-      correct: "a",
+    question: " In which age group the COVID-19 spreads?",
+    a: "COVID-19 occurs in all age groups.",
+    b: "Coronavirus infection is mild in children.",
+    c: "Older person and persons with pre-existing medical conditions are at high risk to develop serious illness.",
+    d: "All the above are correct",
+    correct: "d",
   },
   {
-      question: "What year was JavaScript launched?",
-      a: "1996",
-      b: "1995",
-      c: "1994",
-      d: "none of the above",
-      correct: "b",
+    question: "The first case of novel coronavirus was identified in .....",
+    a: "Beijing",
+    b: "Shanghai",
+    c: "Wuhan, Hubei ",
+    d: "Tianjin",
+    correct: "c",
   },
 ];
 
-const quiz = document.getElementById('quiz')
-const answerEls = document.querySelectorAll('.answer')
-const questionEl = document.getElementById('question')
-const a_text = document.getElementById('a_text')
-const b_text = document.getElementById('b_text')
-const c_text = document.getElementById('c_text')
-const d_text = document.getElementById('d_text')
-const submitBtn = document.getElementById('submit')
+const quiz = document.getElementById("quiz");
+const answerEls = document.querySelectorAll(".answer");
+const questionEl = document.getElementById("question");
+const a_text = document.getElementById("a_text");
+const b_text = document.getElementById("b_text");
+const c_text = document.getElementById("c_text");
+const d_text = document.getElementById("d_text");
+const submitBtn = document.getElementById("submit");
 
-let currentQuiz = 0
-let score = 0
+let currentQuiz = 0;
+let score = 0;
 
-loadQuiz()
+loadQuiz();
 
 function loadQuiz() {
-  deselectAnswers()
+  deselectAnswers();
 
-  const currentQuizData = quizData[currentQuiz]
+  const currentQuizData = quizData[currentQuiz];
 
-  questionEl.innerText = currentQuizData.question
-  a_text.innerText = currentQuizData.a
-  b_text.innerText = currentQuizData.b
-  c_text.innerText = currentQuizData.c
-  d_text.innerText = currentQuizData.d
+  questionEl.innerText = currentQuizData.question;
+  a_text.innerText = currentQuizData.a;
+  b_text.innerText = currentQuizData.b;
+  c_text.innerText = currentQuizData.c;
+  d_text.innerText = currentQuizData.d;
 }
 
 function deselectAnswers() {
-  answerEls.forEach(answerEl => answerEl.checked = false)
+  answerEls.forEach((answerEl) => (answerEl.checked = false));
 }
 
 function getSelected() {
-  let answer
+  let answer;
 
-  answerEls.forEach(answerEl => {
-      if(answerEl.checked) {
-          answer = answerEl.id
-      }
-  })
+  answerEls.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
+    }
+  });
 
-  return answer
+  return answer;
 }
 
-submitBtn.addEventListener('click', () => {
-  const answer = getSelected()
-  
-  if(answer) {
-      if(answer === quizData[currentQuiz].correct) {
-          score++
-      }
+submitBtn.addEventListener("click", () => {
+  const answer = getSelected();
 
-      currentQuiz++
+  if (answer) {
+    if (answer === quizData[currentQuiz].correct) {
+      score++;
+    }
 
-      if(currentQuiz < quizData.length) {
-          loadQuiz()
-      } else {
-          quiz.innerHTML = `
+    currentQuiz++;
+
+    if (currentQuiz < quizData.length) {
+      loadQuiz();
+    } else {
+      quiz.innerHTML = `
               <h2>You answered ${score}/${quizData.length} questions correctly</h2>
               <button onclick="location.reload()">Reload</button>
-          `
-      }
+          `;
+    }
   }
-})
+});
