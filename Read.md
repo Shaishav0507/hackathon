@@ -1,0 +1,1 @@
+This project is basically used to give the ideo of the meaning of emojis we used in our day to day conversation of life and without knowing the meaning me just send it.
