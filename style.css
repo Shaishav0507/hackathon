@@ -43,7 +43,8 @@ button a {
   display: block;
   position: absolute;
   left: 50%;
-
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
   transform: translateX(-50%);
   min-width: 100%;
   min-height: 100%;

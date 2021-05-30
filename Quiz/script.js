@@ -14,11 +14,12 @@ const quizData = [
     a: "December 2020",
     b: "January 2021",
     c: "March 2021",
-    d: "eburary 2021",
+    d: "Feburary 2021",
     correct: "c",
   },
   {
-    question: " In which age group the COVID-19 spreads?",
+    question: 
+    " In which age group the COVID-19 spreads?",
     a: "COVID-19 occurs in all age groups.",
     b: "Coronavirus infection is mild in children.",
     c: "Older person and persons with pre-existing medical conditions are at high risk to develop serious illness.",
@@ -26,12 +27,67 @@ const quizData = [
     correct: "d",
   },
   {
-    question: "The first case of novel coronavirus was identified in .....",
+    question:
+     "The first case of novel coronavirus was identified in .....",
     a: "Beijing",
     b: "Shanghai",
     c: "Wuhan, Hubei ",
     d: "Tianjin",
     correct: "c",
+  },
+  {
+    question:
+     "Which of the following regarding Isolation during COVID-19 is correct? \n1. Got tested postive for the virus or having symptoms. \n 2. It means being separated from other people.",
+    a: "Only 1",
+    b: "Only 2",
+    c: "Both 1 and 2",
+    d: "Neither 1 or 2",
+    correct: "c",
+  },
+  {
+    question:
+    "In India, when did the second phase of COVID-19 vaccination start?",
+    a: "December 2020",
+    b: "January 2021",
+    c: "February 2021",
+    d: "March 2021",
+    correct: "d",
+  },
+  {
+    question:
+    "How many countries, areas, or territories are suffering from novel coronavirus outbreaks in the World?",
+    a: "More than 50",
+    b: "More than 100",
+    c: "More than 150",
+    d: "More than 200",
+    correct: "d",
+  },
+  {
+    question:
+    "In a study, which cells are found in COVID-19 patients 'bode well' for long-term immunity?",
+    a: "P-cell",
+    b: "T-cell",
+    c: "D-cell",
+    d: "Endothelial Cells",
+    correct: "b",
+  },
+  {
+    question:
+    "Name a clinical trial in which blood is transfused from recovered COVID-19 patients to a coronavirus patient who is in critical condition?",
+    a: "Plasma Therapy",
+    b: "Solidarity",
+    c: "Remdesivir",
+    d: "Hydroxychloroquine",
+    correct: "a",
+  },
+  {
+    question:
+    "From where coronavirus got its name?",
+    a: "Due to their crown-like projections",
+    b: "Due to their leaf-like projections",
+    c: "Due to their surface structure of bricks",
+    d: "None of the above",
+    correct: "a",
   },
 ];
 
